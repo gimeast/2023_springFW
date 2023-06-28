@@ -1,20 +1,16 @@
-package org.gimeast.jdbcex.domain;
-
+package org.gimeast.jdbcex.dto;
 
 import lombok.*;
 
 import java.time.LocalDate;
 
-@Getter
 @Builder
-@ToString
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-public class TodoVo {
-
+@AllArgsConstructor
+public class TodoDto {
     private Long tno;
     private String title;
     private LocalDate dueDate;
     private boolean finished;
-
 }
