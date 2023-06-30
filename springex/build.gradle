@@ -25,24 +25,38 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+
+
+    //db연동
     implementation 'com.zaxxer:HikariCP:5.0.1'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.8'
 
+    //jstl
     implementation 'javax.servlet:jstl:1.2'
 
+    //log4j
     testImplementation "org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}"
     implementation "org.apache.logging.log4j:log4j-api:${log4jVersion}"
     implementation "org.apache.logging.log4j:log4j-core:${log4jVersion}"
 
+    //lombok
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
+    //spring
     implementation "org.springframework:spring-webmvc:${springVersion}"
     testImplementation "org.springframework:spring-test:${springVersion}"
     implementation "org.springframework:spring-context:${springVersion}"
     implementation "org.springframework:spring-core:${springVersion}"
+
+    //mybatis
+    implementation "org.springframework:spring-jdbc:${springVersion}"
+    implementation 'org.springframework:spring-tx:5.3.27'
+    implementation 'org.mybatis:mybatis:3.5.13'
+    implementation 'org.mybatis:mybatis-spring:2.0.7'
+
 
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
 
