@@ -8,13 +8,17 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="org.springframework" level="INFO" additivity="false">
-            <AppenderRef ref="console" />
-        </Logger>
+        <logger name="org.springframework" level="INFO" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
 
-        <Logger name="org.gimeast" level="INFO" additivity="false">
-            <AppenderRef ref="console" />
-        </Logger>
+        <logger name="org.springframework" level="INFO" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+
+        <logger name="org.gimeast.springex.mapper" level="TRACE" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
 
         <root level="INFO" additivity="false">
             <AppenderRef ref="console" />
